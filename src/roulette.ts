@@ -135,6 +135,8 @@ export class Roulette extends EventTarget {
   private _updateMarbles(deltaTime: number) {
     if (!this._stage) return;
 
+    const removalIds: number[] = [];
+
     for (let i = 0; i < this._marbles.length; i++) {
       const marble = this._marbles[i];
       marble.update(deltaTime);
@@ -153,11 +155,11 @@ export class Roulette extends EventTarget {
         ) {
           this._finishRound(this._marbles[i + 1]);
         }
-        setTimeout(() => {
-          this.physics.removeMarble(marble.id);
-        }, 500);
+        removalIds.push(marble.id);
       }
     }
+
+    removalIds.forEach((id) => this.physics.removeMarble(id));
 
     const targetIndex = this._winnerRank - this._winners.length;
     const topY = this._marbles[targetIndex] ? this._marbles[targetIndex].y : 0;
