@@ -8,6 +8,16 @@ export const STUCK_DELAY = 5000;
 export const winnerAreaHeight = 168;
 export const TAYO_LAVENDER = '#aaa0ff';
 export const UI_FONT_FAMILY = `'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif`;
+// 오락실 도트 테마의 캔버스용 색과 글꼴(패널 쪽 값은 assets/style.scss의 :root)
+export const DOT_LINE = '#566c86';
+export const DOT_INK = '#0d0e17';
+export const DOT_TEXT_SOFT = '#d7dfe6';
+export const DOT_ACCENT = '#ffcd75';
+export const DOT_RED = '#b13e53';
+export const NAME_FONT_FAMILY = `'Noto Sans KR', sans-serif`;
+export const DOT_FONT_FAMILY = `'Galmuri11', 'Noto Sans KR', sans-serif`;
+export const NUMBER_FONT_FAMILY = `'Press Start 2P', 'Galmuri11', monospace`;
+export const WINNER_NAME_FONT_FAMILY = `'Do Hyeon', 'Noto Sans KR', sans-serif`;
 
 export enum Skills {
   None,
@@ -62,7 +72,7 @@ export const Themes: Record<string, ColorTheme> = {
     winnerText: '#cccccc',
   },
   dark: {
-    background: 'black',
+    background: DOT_INK,
     marbleLightness: 75,
     marbleWinningBorder: 'white',
     skillColor: 'white',
@@ -88,9 +98,9 @@ export const Themes: Record<string, ColorTheme> = {
       },
     },
     rankStroke: '',
-    minimapBackground: '#333333',
+    minimapBackground: '#1a1c2c',
     minimapViewport: 'white',
-    winnerBackground: 'rgba(0, 0, 0, 0.72)',
+    winnerBackground: 'rgba(13, 14, 23, 0.88)',
     winnerOutline: '',
     winnerText: 'white',
   },
