@@ -5,8 +5,6 @@ export const canvasWidth = 1600;
 export const canvasHeight = 900;
 export const zoomThreshold = 5;
 export const STUCK_DELAY = 5000;
-export const winnerAreaHeight = 168;
-export const TAYO_LAVENDER = '#aaa0ff';
 export const UI_FONT_FAMILY = `'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif`;
 // 오락실 도트 테마의 캔버스용 색과 글꼴(패널 쪽 값은 assets/style.scss의 :root)
 export const DOT_LINE = '#566c86';
@@ -23,18 +21,6 @@ export enum Skills {
   None,
   Impact,
 }
-
-export const DefaultEntityColor = {
-  box: 'cyan',
-  circle: 'yellow',
-  polyline: 'white',
-} as const;
-
-export const DefaultBloomColor = {
-  box: 'cyan',
-  circle: 'yellow',
-  polyline: 'cyan',
-};
 
 export const Themes: Record<string, ColorTheme> = {
   light: {
